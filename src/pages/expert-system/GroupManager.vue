@@ -12,7 +12,7 @@
                 v-model="filterTerm"
                 type="text"
                 class="form-control"
-                placeholder="Фильтр по названию"
+                placeholder="Поиск по названию группы"
               />
               <button class="btn btn-outline-secondary" @click="filterTerm = ''">
                 ✕
@@ -48,7 +48,7 @@
               />
             </div>
             <button
-              class="btn btn-success"
+              class="btn btn-success text-light me-2"
               :disabled="!newGroupName.trim()"
               @click="addGroup"
             >
@@ -74,7 +74,7 @@
             </div>
             <div class="d-flex">
               <button
-                class="btn btn-success me-2"
+                class="btn btn-success text-light me-2"
                 :disabled="!editGroupName.trim()"
                 @click="updateGroup"
               >
@@ -183,10 +183,3 @@ async function deleteGroup(id) {
 
 onMounted(fetchGroups)
 </script>
-
-<style scoped>
-.list-group-item.active {
-  background-color: #e9f7ef;
-  border-color: #8fd19e;
-}
-</style>
